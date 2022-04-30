@@ -31,3 +31,17 @@
 //     Only one valid answer exists.
 
 // Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+
+//O(n2):
+let nums =[3,30, -1, -2, 6];
+let target = -3;
+function twosumN2(arr, target){
+    for(let i=0; i<arr.length; i++){
+        for (j=i+1; j<arr.length; j++){
+            if (arr[i]+arr[j]==target){
+                return [i, j];
+            }
+        }
+    }
+}
+console.log(twosumN2(nums, target));
